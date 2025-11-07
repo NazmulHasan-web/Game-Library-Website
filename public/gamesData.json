@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://i.ibb.co.com/jkJZmRdX/clint-bustrillos-5zvzi-FY-yj8-unsplash.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://i.ibb.co.com/gbbGgsx6/maxresdefault.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "COD Mobile delivers thrilling multiplayer and battle royale modes with stunning graphics and action-packed gameplay.",
+    "ratings": "4.4",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Free Fire",
+    "coverPhoto": "https://i.ibb.co.com/KPN3TYk/625474b0121d854546d5e419-Garena-Free-Fire.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire is a fast survival shooting game with quick matches in compact battlegrounds.",
+    "ratings": "4.1",
+    "developer": "Garena"
+  },
+  {
+    "id": "4",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://i.ibb.co.com/JWxpkWQb/0a01ad99-bfb2-4675-afdc-eaff48dbe92e.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://clashofclans.com/",
+    "description": "Build your village, train strong troops, and battle millions of players around the world.",
+    "ratings": "4.6",
+    "developer": "Supercell"
+  },
+  {
+    "id": "5",
+    "title": "Clash Royale",
+    "coverPhoto": "https://i.ibb.co.com/VWBrFzVZ/Clash-royale.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://clashroyale.com/",
+    "description": "A real-time card-based battle game where strategy and timing decide victory.",
+    "ratings": "4.3",
+    "developer": "Supercell"
+  },
+  {
+    "id": "6",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co.com/ZzqJ6d1b/Genshin-Impact-2020-09-28-06-20-51-184.jpg",
+    "category": "Adventure",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Explore a magical open world filled with mysteries, action combat, and captivating storyline.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "7",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co.com/20tsgm7y/minecraft-landscape.jpg",
+    "category": "Survival",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "A sandbox survival adventure where creativity meets endless possibilities.",
+    "ratings": "4.8",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "8",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://i.ibb.co.com/JRy50mCK/1716177859600-e-2147483647-v-beta-t-cgl-Ctns-Iv-ESr-UWSHr-RAb-T4t-s-DKASY1-Tz3o33wmfqp-Y.png",
+    "category": "Racing",
+    "downloadLink": "https://www.gameloft.com/game/asphalt-9/",
+    "description": "High-speed arcade racing with premium cars, stunning graphics, and smooth drift mechanics.",
+    "ratings": "4.4",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "9",
+    "title": "FIFA Mobile",
+    "coverPhoto": "https://i.ibb.co.com/cSmTrL27/y-QHb1bk88-ENXLZ2-ZO-st7cu-G78pva5y-RAge2-Cjh-BPo-Bo-Eng1ouxyx30v-K4s4-Z7553-Kohd9p-PVm1-GC2-Phs8sl.png",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/games/fifa/fifa-mobile",
+    "description": "Build your ultimate football team and enjoy competitive real-time soccer gameplay.",
+    "ratings": "4.3",
+    "developer": "EA Sports"
+  }
+]
