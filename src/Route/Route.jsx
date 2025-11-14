@@ -6,6 +6,7 @@ import Error from "../assets/components/Error";
 import Home from "../assets/components/Home";
 import Login from "../assets/pages/Login";
 import Register from "../assets/pages/Register";
+import AuthLayout from "../assets/pages/AuthLayout";
 
  const router=createBrowserRouter([
     {
@@ -33,20 +34,28 @@ import Register from "../assets/pages/Register";
         ]
     },
      {
+        path:"/auth",
+        element:<AuthLayout></AuthLayout>,
+        children:[
+            {
+                path:"/auth/login",
+                Component:Login,
+            },
+            {
+                path:"/auth/register",
+                Component:Register,
+            }
+
+        ]
+    },
+
+     {
          path:"profile",
           Component:Profile,
       },
     {
         path:"/details",
         element:<h2>Hello profile</h2>
-    },
-    {
-        path:"/login",
-        Component:Login
-    },
-    {
-        path:"/register",
-        Component:Register,
     },
     {
         path:"/error",
