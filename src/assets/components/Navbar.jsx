@@ -34,7 +34,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-3">
                 <Link to="/login"><a className="btn">Login</a></Link>
-                <a className="btn">Registration</a>
+                <Link to="/register"><a className="btn">Registration</a></Link>
             </div>
         </div>
     );

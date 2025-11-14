@@ -4,6 +4,8 @@ import Profile from "../assets/components/Profile";
 import Games from "../assets/components/Games";
 import Error from "../assets/components/Error";
 import Home from "../assets/components/Home";
+import Login from "../assets/pages/Login";
+import Register from "../assets/pages/Register";
 
  const router=createBrowserRouter([
     {
@@ -40,12 +42,17 @@ import Home from "../assets/components/Home";
     },
     {
         path:"/login",
-        element:<h2>Hello router</h2>
+        Component:Login
+    },
+    {
+        path:"/register",
+        Component:Register,
     },
     {
         path:"/error",
         element:<h2>Hello Error</h2>
     }
+
  ])
 
  export default router;
