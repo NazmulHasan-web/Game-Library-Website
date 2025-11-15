@@ -1,6 +1,6 @@
 import React, { use } from 'react';
 import { SiEpicgames } from 'react-icons/si';
-import { Link, NavLink } from 'react-router';
+import { Link , NavLink } from 'react-router';
 import { authContext } from '../../provider/AuthProvider';
 
 
@@ -48,6 +48,7 @@ const Navbar = () => {
                 {
                     user ? 
                     (<>
+                    <Link to="/profile" className='cursor-pointer'><img className='w-12 rounded-3xl' src={user.photoURL} alt="" /></Link>
                     <button onClick={handleLogout} className='btn btn-primary'>LogOut</button>
                     </>):
                     (<>

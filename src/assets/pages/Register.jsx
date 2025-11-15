@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { use } from 'react';
 import { authContext } from '../../provider/AuthProvider';
 
@@ -8,7 +8,8 @@ import { authContext } from '../../provider/AuthProvider';
 
 
 const Register = () => {
-    const {createUser,setUser}=use(authContext)
+    const {createUser,setUser,updateUser}=use(authContext)
+    const navigate=useNavigate();
     const handleRegister=(e)=>{
         e.preventDefault();
        const form=e.target;
@@ -21,7 +22,15 @@ const Register = () => {
        .then(result=>{
         const user=result.user
         console.log(user)
-        setUser(user)
+        updateUser({displayName:name,photoURL:photo})
+        .then(()=>{
+            setUser({...user,displayName:name,photoURL:photo})
+            navigate("/")
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+        
        })
        .catch(error=>{
         console.log(error)

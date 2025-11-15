@@ -8,6 +8,7 @@ import Login from "../assets/pages/Login";
 import Register from "../assets/pages/Register";
 import AuthLayout from "../assets/pages/AuthLayout";
 import Details from "../assets/components/Details";
+import PrivateRoute from "../provider/PrivateRoute";
 
  const router=createBrowserRouter([
     {
@@ -51,12 +52,14 @@ import Details from "../assets/components/Details";
     },
 
      {
-         path:"profile",
+         path:"/profile",
           Component:Profile,
       },
     {
         path:"/games-details/:id",
-        element:<Details></Details>,
+        element:<PrivateRoute>
+            <Details></Details>
+        </PrivateRoute>,
         loader:()=>fetch("/gamesData.json"),
     },
     {
