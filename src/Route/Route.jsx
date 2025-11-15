@@ -7,6 +7,7 @@ import Home from "../assets/components/Home";
 import Login from "../assets/pages/Login";
 import Register from "../assets/pages/Register";
 import AuthLayout from "../assets/pages/AuthLayout";
+import Details from "../assets/components/Details";
 
  const router=createBrowserRouter([
     {
@@ -54,8 +55,9 @@ import AuthLayout from "../assets/pages/AuthLayout";
           Component:Profile,
       },
     {
-        path:"/details",
-        element:<h2>Hello profile</h2>
+        path:"/games-details/:id",
+        element:<Details></Details>,
+        loader:()=>fetch("/gamesData.json"),
     },
     {
         path:"/error",

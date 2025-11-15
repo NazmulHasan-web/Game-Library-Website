@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const AllGames = ({card}) => {
-    const {title, coverPhoto, description}=card;
+    const {title, coverPhoto,id, description}=card;
     return (
-       <div className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-xl transition-all duration-300 cursor-pointer">
+       <Link to={`/games-details/${id}`} className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-xl transition-all duration-300 cursor-pointer">
       {/* Cover Photo */}
       <img
         src={coverPhoto}
@@ -25,7 +26,7 @@ const AllGames = ({card}) => {
           Click Me
         </a>
       </div>
-    </div>
+    </Link>
     );
 };
 

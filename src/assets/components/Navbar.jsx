@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { use } from 'react';
 import { SiEpicgames } from 'react-icons/si';
 import { Link, NavLink } from 'react-router';
+import { authContext } from '../../provider/AuthProvider';
 
 
 const Navbar = () => {
+    const {user,logOut}=use(authContext)
+    const handleLogout=()=>{
+        console.log("log out")
+        logOut()
+        .then(()=>{
+            alert("You logged out successfully")
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
     const links=<>
     
     <li><NavLink to="/">Home</NavLink></li>
@@ -33,8 +45,17 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end space-x-3">
-                <Link to="/auth/login" className="btn">Login</Link>
-                <Link to="/auth/register"className="btn">Registration</Link>
+                {
+                    user ? 
+                    (<>
+                    <button onClick={handleLogout} className='btn btn-primary'>LogOut</button>
+                    </>):
+                    (<>
+                    <Link to="/auth/login" className="btn btn-primary">Login</Link>
+                    <Link to="/auth/register"className="btn btn-primary">Registration</Link>
+                    </>)
+                }
+                
             </div>
         </div>
     );

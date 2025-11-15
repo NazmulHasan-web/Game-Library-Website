@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router";
 
 const TopGames = ({ top }) => {
-  const { title, coverPhoto, description} = top;
+  const { title, coverPhoto,id, description} = top;
 
   return (
-    <div className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-xl cursor-pointer Framer Motion (now Motion)">
+    <Link to={`/games-details/${id}`} className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-xl cursor-pointer Framer Motion (now Motion)">
       {/* Cover Photo */}
       <img
         src={coverPhoto}
@@ -26,7 +27,7 @@ const TopGames = ({ top }) => {
           Click Me
         </a>
       </div>
-    </div>
+    </Link>
   );
 };
 
