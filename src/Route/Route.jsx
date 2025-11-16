@@ -9,24 +9,29 @@ import Register from "../assets/pages/Register";
 import AuthLayout from "../assets/pages/AuthLayout";
 import Details from "../assets/components/Details";
 import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../assets/pages/Loading";
+import ForgetPassword from "../assets/pages/ForgetPassword";
 
  const router=createBrowserRouter([
     {
         path:"/",
        Component:HomeLayout,
         loader:()=>fetch("/gamesData.json"),
+        hydrateFallbackElement:<Loading></Loading>,
         
         children:[
             {
                 index:true,
                 Component:Home,
                 loader:()=>fetch("/gamesData.json"),
+                hydrateFallbackElement:<Loading></Loading>,
             },
            
             {
                 path:"games",
                 Component:Games,
                 loader:()=>fetch("/gamesData.json"),
+                hydrateFallbackElement:<Loading></Loading>,
                 
             },
             {
@@ -55,12 +60,17 @@ import PrivateRoute from "../provider/PrivateRoute";
          path:"/profile",
           Component:Profile,
       },
+      {
+                path:"/forget-password",
+                Component:ForgetPassword,
+     },
     {
         path:"/games-details/:id",
         element:<PrivateRoute>
             <Details></Details>
         </PrivateRoute>,
         loader:()=>fetch("/gamesData.json"),
+        hydrateFallbackElement:<Loading></Loading>,
     },
     {
         path:"/error",
