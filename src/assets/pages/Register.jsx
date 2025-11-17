@@ -1,6 +1,6 @@
 
 import { Link, useNavigate } from 'react-router';
-import { use, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import { authContext } from '../../provider/AuthProvider';
 
 
@@ -11,6 +11,8 @@ const Register = () => {
     const { createUser, setUser, updateUser,signInWithGoogle } = use(authContext)
     const navigate = useNavigate();
     const [error, setError] = useState("")
+    const nameRef=useRef();
+    const urlRef=useRef();
     const handleRegister = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -18,6 +20,10 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
+        // const userName=nameRef.current.value;
+        // const userPhoto=urlRef.current.value;
+        
+        
         //    Password Validation 
         const passwordLength = /^.{6,}$/;
         if (!passwordLength.test(password)) {
@@ -58,6 +64,7 @@ const Register = () => {
     
 
     }
+
     const handleSignInGoogle=()=>{
         signInWithGoogle()
         .then(result=>{
@@ -81,17 +88,17 @@ const Register = () => {
                             <fieldset className="fieldset">
                                 {/* Name */}
                                 <label className="label">Name</label>
-                                <input type="text" className="input" name='name' placeholder="Name" required />
+                                <input type="text" className="input" name='name' ref={nameRef} placeholder="Name" required />
                                 {/* Photo URL */}
                                 <label className="label">Photo URL</label>
-                                <input type="text" className="input" name='photo' placeholder="Photo URL" required />
+                                <input type="text" className="input" name='photo' ref={urlRef} placeholder="Photo URL" required />
                                 {/* Email */}
                                 <label className="label">Email</label>
                                 <input type="email" className="input" name='email' placeholder="Email" required />
                                 {/* Password */}
                                 <label className="label">Password</label>
                                 <input type="password" className="input" name='password' placeholder="Password " required />
-                                <button type='submit' className="btn btn-neutral mt-4">Register</button>
+                                <button  type='submit' className="btn btn-neutral mt-4">Register</button>
                                 {error ? <p className='text-red-600'>{error}</p> : <p className='text-emerald-500'>Account created successfully</p>}
 
                             </fieldset>

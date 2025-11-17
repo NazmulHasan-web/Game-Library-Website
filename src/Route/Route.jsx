@@ -11,32 +11,33 @@ import Details from "../assets/components/Details";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../assets/pages/Loading";
 import ForgetPassword from "../assets/pages/ForgetPassword";
+import UpdateProfile from "../assets/components/UpdateProfile";
 
  const router=createBrowserRouter([
     {
         path:"/",
-       Component:HomeLayout,
+       element:<HomeLayout></HomeLayout>,
         loader:()=>fetch("/gamesData.json"),
         hydrateFallbackElement:<Loading></Loading>,
         
         children:[
             {
                 index:true,
-                Component:Home,
+                element:<Home></Home>,
                 loader:()=>fetch("/gamesData.json"),
                 hydrateFallbackElement:<Loading></Loading>,
             },
            
             {
                 path:"games",
-                Component:Games,
+                element:<Games></Games>,
                 loader:()=>fetch("/gamesData.json"),
                 hydrateFallbackElement:<Loading></Loading>,
                 
             },
             {
                 path:"*",
-                Component:Error
+                element:<Error></Error>
             },
         ]
     },
@@ -46,11 +47,11 @@ import ForgetPassword from "../assets/pages/ForgetPassword";
         children:[
             {
                 path:"/auth/login",
-                Component:Login,
+                element:<Login></Login>
             },
             {
                 path:"/auth/register",
-                Component:Register,
+                element:<Register></Register>
             }
 
         ]
@@ -58,11 +59,15 @@ import ForgetPassword from "../assets/pages/ForgetPassword";
 
      {
          path:"/profile",
-          Component:Profile,
+          element:<Profile></Profile>
       },
       {
-                path:"/forget-password",
-                Component:ForgetPassword,
+        path:"/forget/password",
+        element:<ForgetPassword></ForgetPassword>
+     },
+     {
+        path:"/update/profile",
+        element:<UpdateProfile></UpdateProfile>
      },
     {
         path:"/games-details/:id",

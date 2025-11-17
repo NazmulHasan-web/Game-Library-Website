@@ -8,7 +8,7 @@ const Login = () => {
     const location=useLocation();
     const navigate=useNavigate();
     const [error,setError]=useState("")
-    console.log(location)
+    // console.log(location)
     const emailRef=useRef();
 
     const handleLogin=(e)=>{
@@ -44,7 +44,7 @@ const Login = () => {
 
     const handleForgot=()=>{
         const email=emailRef.current.value;
-        console.log(email)
+        navigate("/forget/password",{state:{email}});
     }
     return (
         <div className=''>
@@ -63,8 +63,8 @@ const Login = () => {
                                     <input type="email" className="input" ref={emailRef} name='email' placeholder="Email" />
                                     <label className="label">Password</label>
                                     <input type="password" className="input" name='password' placeholder="Password" />
-                                    <div onClick={handleForgot}>
-                                        <a className="link link-hover">Forgot password?</a>
+                                    <div>
+                                        <p onClick={handleForgot} className="link link-hover">Forgot password?</p>
                                         </div>
                                     {error && <p className='text-red-600'>Wrong Password:{error}</p>}
                                     
