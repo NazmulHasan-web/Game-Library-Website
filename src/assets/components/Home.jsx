@@ -6,14 +6,14 @@ const Home = () => {
  
 
     useEffect(()=>{
-        console.log("use effect",document.title)
+        // console.log("use effect",document.title)
         document.title="Home| game-library-website";
-        console.log("after eff",document.title)
+        // console.log("after eff",document.title)
     },[])
     const data = useLoaderData();
     const topData = [...data].sort((a, b) => b.ratings - a.ratings).slice(0, 3);
-    console.log(data)
-    console.log(topData)
+    // console.log(data)
+    // console.log(topData)
     return (
         <div className='w-11/12 mx-auto  mt-16'>
             <h2 className='text-2xl md:text-3xl text-center pb-10'>Top Three Games Basis on The Ratigns</h2>

@@ -5,11 +5,11 @@ import { useNavigate } from 'react-router';
 
 const GameDetails = ({ games }) => {
     const navigate=useNavigate();
-    console.log(games)
+    // console.log(games)
     return (
-        <div className='w-10/12'>
-            <div className='flex '>
-                <img className='w-[600px] rounded-2xl' src={games.coverPhoto} alt="" />
+        <div className='w-10/12 mx-auto'>
+            <div className='flex flex-col md:flex-row md:items-start gap-6'>
+                <img className='w-full md:w-[600px] rounded-2xl object-cover' src={games.coverPhoto} alt="" />
                 <div className='flex-col text-start ml-6'>
                     <h2 className='text-2xl font-medium mt-3'>Title :{games.title} </h2>
                      <p className='mt-3 text-xl'><span className='text-xl font-medium'>Description:</span> {games.description} </p>

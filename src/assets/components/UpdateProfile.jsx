@@ -6,7 +6,7 @@ const UpdateProfile = () => {
     const {user}=use(authContext)
     const prefilledName=user.displayName;
     const prefilledUrl=user.photoURL;
-    console.log(prefilledName,prefilledUrl)
+    // console.log(prefilledName,prefilledUrl)
     return (
         <div className='w-11/12 mx-auto flex justify-center'>
             <div className='mt-20 flex flex-col justify-center bg-gray-200 p-10 rounded-xl shadow-xl'>
