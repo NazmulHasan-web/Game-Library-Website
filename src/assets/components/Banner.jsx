@@ -11,7 +11,7 @@ const Banner = () => {
         <div className='bg-cyan-100'>
             <div className='w-11/12 mx-auto '>
                 <div className='flex flex-col items-center justify-center pb-5'>
-                    <h2 className='text-4xl mt-10'>We Build Productive Game Apps</h2>
+                    <h2 className='text-2xl md:text-4xl mt-10'>We Build Productive Game Apps</h2>
 
                     <Marquee className="mt-5 flex  gap-5" pauseOnHover={true}>
                         {

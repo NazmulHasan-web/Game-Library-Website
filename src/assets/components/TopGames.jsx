@@ -19,13 +19,13 @@ const TopGames = ({ top }) => {
         <p className="text-gray-600 text-sm">{description}</p>
 
         {/* Button */}
-        <a
+        <button
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-full text-center bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition-all"
+          className="inline-block w-full text-center bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition-all cursor-pointer"
         >
           Click Me
-        </a>
+        </button>
       </div>
     </Link>
   );

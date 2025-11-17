@@ -20,7 +20,8 @@ const Navbar = () => {
     
     <li><NavLink to="/">Home</NavLink></li>
     {/* <li><NavLink to="/profile">My Profile</NavLink></li> */}
-    <li><NavLink to="/games">All Games Apps</NavLink></li>
+    <li><NavLink to="/games">All Games</NavLink></li>
+    <li><NavLink to="/new/games">New Games</NavLink></li>
     
     
     </>

@@ -12,6 +12,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../assets/pages/Loading";
 import ForgetPassword from "../assets/pages/ForgetPassword";
 import UpdateProfile from "../assets/components/UpdateProfile";
+import NewGames from "../assets/components/NewGames";
 
  const router=createBrowserRouter([
     {
@@ -34,10 +35,6 @@ import UpdateProfile from "../assets/components/UpdateProfile";
                 loader:()=>fetch("/gamesData.json"),
                 hydrateFallbackElement:<Loading></Loading>,
                 
-            },
-            {
-                path:"*",
-                element:<Error></Error>
             },
         ]
     },
@@ -78,8 +75,12 @@ import UpdateProfile from "../assets/components/UpdateProfile";
         hydrateFallbackElement:<Loading></Loading>,
     },
     {
-        path:"/error",
-        element:<h2>Hello Error</h2>
+        path:"/new/games",
+        element:<NewGames></NewGames>
+    },
+    {
+        path:"*",
+        element:<Error></Error>
     }
 
  ])

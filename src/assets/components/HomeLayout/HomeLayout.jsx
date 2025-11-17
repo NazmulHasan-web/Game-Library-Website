@@ -7,6 +7,7 @@ import Loading from '../../pages/Loading';
 
 const HomeLayout = () => {
     const {state}=useNavigation();
+
     return (
         <div>
             <header>
