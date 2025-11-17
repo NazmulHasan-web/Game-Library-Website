@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router';
 import TopGames from './TopGames';
 
 const Home = () => {
+ 
 
     useEffect(()=>{
         console.log("use effect",document.title)

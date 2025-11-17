@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { authContext } from '../../provider/AuthProvider';
+import { Link } from 'react-router';
 
 const UpdateProfile = () => {
     const {user}=use(authContext)
@@ -19,7 +20,7 @@ const UpdateProfile = () => {
                 <br />
                 <input type="text" className="input" name='photo' defaultValue={prefilledUrl} placeholder="Photo URL" required />
                 <br />
-                <button className='btn btn-secondary'>Update Information Button</button>
+                <Link to="/"><button className='btn btn-secondary'>Update Information Button</button></Link>
             </div>
         </div>
     );

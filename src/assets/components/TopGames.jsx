@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
+const MotionLink=motion(Link)
 const TopGames = ({ top }) => {
   const { title, coverPhoto,id, description} = top;
 
   return (
-    <Link to={`/games-details/${id}`} className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-xl cursor-pointer Framer Motion (now Motion)">
+    
+    <MotionLink to={`/games-details/${id}`}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.97 }}
+    transition={{ type: "spring", stiffness: 300 }}
+     className="max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-xl cursor-pointer Framer Motion (now Motion)">
       {/* Cover Photo */}
       <img
         src={coverPhoto}
@@ -27,7 +34,7 @@ const TopGames = ({ top }) => {
           Click Me
         </button>
       </div>
-    </Link>
+    </MotionLink>
   );
 };
 
